@@ -29,6 +29,10 @@ int main(void)
         if (Input::KeyPressed(GLFW_KEY_ENTER)) {
             Window::ToggleFullscreen();
         }
+
+        if (Input::KeyPressed(GLFW_KEY_F2)) {
+            Render::ToggleWireframe();
+        }
     }
     
     return 0;

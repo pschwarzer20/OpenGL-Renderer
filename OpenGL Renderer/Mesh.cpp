@@ -1,12 +1,11 @@
 
 #include "Include.h";
 #include "Mesh.h";
+#include <iostream>
 
-void Mesh::Create(float verts[], unsigned int inds[]) {
-    vertices = verts;
-    indices = inds;
-    verticesCount = sizeof(vertices);
-    indicesCount = sizeof(indices);
+void Mesh::Create(float vertices[], unsigned int indices[], int vertCount, int indCount) {
+    verticesCount = vertCount;
+    indicesCount = indCount;
 
     // Generate and bind VAO
     glGenVertexArrays(1, &VAO);
@@ -15,18 +14,17 @@ void Mesh::Create(float verts[], unsigned int inds[]) {
     // Generate and bind VBO
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, verticesCount * sizeof(float), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, verticesCount, vertices, GL_STATIC_DRAW);
 
     // Generate and bind EBO
     glGenBuffers(1, &EBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesCount * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesCount, indices, GL_STATIC_DRAW);
 
     // Set vertex attribute pointers
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    // Unbind VAO
     glBindVertexArray(0);
 }
 

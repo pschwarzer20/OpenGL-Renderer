@@ -1,4 +1,3 @@
-﻿  Mesh.cpp
-C:\Users\Patrick-PC\source\repos\OpenGL Renderer\OpenGL Renderer\Mesh.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Patrick-PC\source\repos\OpenGL Renderer\OpenGL Renderer\Mesh.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  OpenGL Renderer.vcxproj -> C:\Users\Patrick-PC\source\repos\OpenGL Renderer\x64\Debug\OpenGL Renderer.exe
+﻿  Render.cpp
+C:\Users\Patrick-PC\source\repos\OpenGL-Renderer\OpenGL Renderer\Render.cpp(49,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  OpenGL Renderer.vcxproj -> C:\Users\Patrick-PC\source\repos\OpenGL-Renderer\x64\Debug\OpenGL Renderer.exe

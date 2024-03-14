@@ -2,12 +2,10 @@
 
 class Mesh {
 public:
-	void Create(float vertices[], unsigned int indices[]);
+	void Create(float vertices[], unsigned int indices[], int vertCount, int indicesCount);
 	void Draw();
 
 private:
 	unsigned int VBO, VAO, EBO;
-	float* vertices;
-	unsigned int* indices;
-	unsigned int verticesCount, indicesCount;
+	int verticesCount, indicesCount;
 };
