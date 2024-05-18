@@ -136,14 +136,12 @@ GLFWwindow* Window::GetWindow() {
 void Window::ToggleFullscreen() {
 	_windowClass->ToggleWindowed();
 	if (!_windowClass->GetWindowed()) {
-		std::cout << "Fullscreen" << std::endl;
 		// Store window positions and fullscreen the window
 		glfwGetWindowPos(_window, &_windowClass->lastPosX, &_windowClass->lastPosY);
 		screenSize size = _windowClass->GetFullscreenSize();
 		glfwSetWindowMonitor(_window, _monitor, 0, 0, size.width, size.height, _vidmode->refreshRate);
 	}
 	else {
-		std::cout << "Windowed" << std::endl;
 		// Restore window to minimized dimensions and set to stored position
 		screenSize size = _windowClass->GetMinimizedWindowsSize();
 		std::cout << size.width << std::endl;

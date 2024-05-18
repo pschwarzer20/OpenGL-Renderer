@@ -1,3 +1,1 @@
-﻿  Render.cpp
-C:\Users\Patrick-PC\source\repos\OpenGL-Renderer\OpenGL Renderer\Render.cpp(49,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  OpenGL Renderer.vcxproj -> C:\Users\Patrick-PC\source\repos\OpenGL-Renderer\x64\Debug\OpenGL Renderer.exe
+﻿  OpenGL Renderer.vcxproj -> C:\Users\Patrick-PC\source\repos\OpenGL-Renderer\x64\Debug\OpenGL Renderer.exe
